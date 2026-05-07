@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--book marking or internal routing concept by linking internal jump to content
+    using anchor tag followed with #(idname) and correspondent id name in label or heading tag-->
+    <h1>
+        <a href="#h">home</a>
+        <a href="#cr">classroom</a>
+        <a href="#c">courses</a>
+        <a href="#r">register</a>
+        <a href="#co">contact</a>
+
+    </h1>
+
+
+
+    <div style="color: navy;" style="background-color: rebeccapurple;">
+        <h1 id="h">HOME</h1>
+        <P>Lorem ipsum, dolor <span style="color: red">sit amet consectetur</span> adipisicing elit. Ad fugiat
+            tenetur,
+            veritatis natus odio cumque id laborum assumenda velit consequatur aliquid tempore
+            quaerat a est? Quo a nihil qui nemo.</P>
+        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque corporis maiores
+            similique sequi quis fuga harum. Dolorum eum at nostrum autem facilis
+            temporibus, quaerat beatae obcaecati? A iste magnam tenetur?</P>
+
+        <h1 id="cr">our classroom</h1>
+        <img src="picture2.jpg" alt="pictue" width="200px" height="100px">
+        <img src="picture2.jpg" alt="pictue" width="200px" height="100px">
+        <img src="picture2.jpg" alt="pictue" width="200px" height="100px">
+
+    </div>
+    <div>
+        <h1 id="c">ourcourses</h1>
+        <!--table>tr*3>td*3-->
+        <table border="2" cellpadding="20px">
+            <tr>
+                <td>content</td>
+                <td>content</td>
+                <td>content</td>
+            </tr>
+            <tr>
+                <td>content</td>
+                <td>content</td>
+                <td>content</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h1 id="r">register</h1>
+        <form action="" method="post">
+            <label for="">min quantity</label>
+            <input type="number" min="5" placeholder="enter minimum value"><br>
+
+            <label for="">max quantity</label>
+            <input type="number" max="10" placeholder="enter max value"><br>
+
+            <label for="name">enter your name</label>
+            <input type="text" id="name" name="uname" placeholder="enter your name">
+            <button type="button">submit</button>
+            <br><br>
+
+            <h1>gender</h1>
+            <input type="radio" name="gender" value="male">
+            <label for="">male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="">female</label>
+
+            <h1>checkbox</h1>
+            <input type="checkbox" name="course" value="maths" id="m">
+            <label for="m">maths</label>
+            <input type="checkbox" name="course" value="physics" id="n">
+            <label for="n">physics</label>
+            <input type="checkbox" name="course" value="chemistry" id="l">
+            <label for="l">chemistry</label> <br><br><br>
+
+            <label for="">select ur class</label>
+            <select name="class" id="">
+                <option value="sixth">java</option>
+                <option value="eight">python</option>
+                <option value="nineth">c++</option>
+            </select>
+            <button type="submit">submit</button>
+            <br><br><br>
+            <h1>enter your address</h1><br>
+            <textarea name="" id="" placeholder="please enter your text here"></textarea><br>
+            <button type="submit">submit</button>
+
+            <!--
+ attribute
+ ------------
+ 'for'- 'id' to make relation
+ 'name'(object key ) relation to 'value'   
+ 'placeholder' tag is used to display text inside text box at input
+'required' is used to make mandatory filed used in input tag
+div tag is used S A CONTAINER and forma groupwise elements for applying styles
+span tag is used to form a group for a text
+-->
+
+        </form>
+    </div>
+
+    <h1 id="co">contact us</h1>
+    <h1>
+        <a href="mailto:venkateshstrives@gmail.com" target="_blank">mail us</a><br>
+        <a href="tel:918499959871" target="_blank">call us</a><br>
+        <a href="https://wa.me/8499959871" target="_blank">whats app</a><br>
+        <a href="register.html" target="_blank">register</a><br>
+
+    </h1>
+    <!--schemantic tags are as follows-->
+    <header>c</header>
+    <nav>c</nav>
+    <section>c</section>
+    <aside>c</aside>
+
+    <footer>c</footer>
+
+
+
+</body>
+
+</html>
