@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- how to insert css
+     intenal ,external,inline-->
+
+
+    <!--id selector
+        denoted by #name to uniquely apply styles
+     
+     -->
+    <!-- class selector 
+        
+    --it is used to determine the styles to apply for multiple tags
+
+-->
+    <!--specificity
+    inline ---internal -- external
+    id--class--element
+    
+    -->
+
+    <!--
+    !important is used for the specificity
+    -->
+
+
+    <style>
+        /* #el1 {
+            color: red;
+        } */
+
+        /* h1 {
+            2 color: green;
+        }
+
+        h1 {
+            color: rgb(208, 151, 19)
+        } */
+
+        /* h1 {
+            /* color: rgba(208, 151, 19, 56); */
+        /* color: hsla(360, 100, 50); */
+        /* color: #aa83fe; }*/
+        /* 
+        * {
+            color: green;
+        } */
+        /* #el1,
+        div,
+        p {
+            color: red;
+        } */
+        /* / */
+
+        /* span {
+            color: red;
+            padding: 100px;
+            margin: 30px;
+            height: 30px;
+            width: 200px;
+            display: inline-block;
+        } */
+
+        div {
+            background-color: lightsalmon;
+            background-image: url(picture2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 600px;
+
+        }
+    </style>
+
+    <!--box model
+    
+    it is combination of four components
+    1.)content
+        it includes width and height
+        width:100px
+        height:100px
+    2.)padding
+        it is a space inside the element
+        padding :20px; (all 4 side)
+        or
+        padding: 10px 30px; ( top bottom)
+        or
+        padding:10px 20px 30px;
+        padding 10px 20px 30px 40px;
+    3.)border
+        border: 3px solid black;
+        border styles-solid,double,dotted,dashed,ridge,groove,none
+
+    4.)margin
+        it is a space around element
+    -->
+
+    <!--block level elements (top and bottom) <h1> content<h1/>    <h1> content<h1/>  ,it always starts on a new line
+    inline elements(side by side) <h1> content<h1/>  <h1> content<h1/>  , it always starts side by side unless we use br tag.
+    
+    <h1>contet</h1>
+    inline elements does not take margin,height,width
+
+    inline-block
+    it behaves like inline elements but takes properties like margin,height,width etc..
+        -->
+
+
+</head>
+
+<body>
+    <div>
+        <h1 id="el1">some content</h1>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit, <span> consectetur adipisicing elit</span>. Pariatur aliquam ipsa amet totam voluptas
+        nulla dicta
+        dignissimos, eaque eum nesciunt eius nihil aspernatur doloribus! Fugit iure voluptates saepe accusamus aliquam!
+    </p> -->
+
+
+    <!-- <h2>heading </h2>
+    <h2>heading </h2>
+    <h2>heading </h2> -->
+
+
+</body>
+
+</html>
