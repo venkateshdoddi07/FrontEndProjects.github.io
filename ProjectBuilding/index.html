@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         nav {
             background-color: rgb(239, 186, 10);
@@ -21,6 +24,12 @@
             border-radius: 10%;
             text-decoration: none;
         }
+
+        nav>a:hover {
+            transition: all 1s;
+            transform: translate(0px, 20px);
+        }
+
 
         .s1 {
             border-radius: 10px;
@@ -51,6 +60,11 @@
 
         }
 
+        .s2>div:hover {
+            box-shadow: 1px 1px 3px 5px black;
+            transition: all 1s;
+        }
+
         .s3 {
             text-align: center;
             padding: 30px 2px;
@@ -74,15 +88,42 @@
 
             ;
         }
+
+        .s4 {
+            text-align: center;
+            background-color: rgb(210, 230, 238);
+        }
+
+        .s4>h3 {
+            font-weight: 300;
+        }
+
+        .s4>h2 {
+            font-weight: 400;
+
+        }
+
+        .s4>h1 {
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: navy;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            padding: 20px 1px 1px 1px;
+            height: 40px;
+        }
     </style>
 </head>
 
 <body>
     <nav>
-        <a href="">Home</a>
+        <a href=""><i class="fa-solid fa-house"></i>Home</a>
         <a href="">About</a>
         <a href="">Services</a>
-        <a href="">Contact</a>
+        <a href=""><i class="fa-solid fa-phone"></i>Contact</a>
     </nav>
     <section class="s1">
         <h1>Learns CSS through Projects</h1>
@@ -111,6 +152,18 @@
             <p>this is box one text akjndjkashdjkashdasdasd</p>
         </div>
     </section>
+    <section class="s4">
+
+        <h1>CSS Fonts</h1>
+        <h3>Light Font Weight-300</h3>
+        <h2>Normal Font Weight-400</h2>
+        <h1>Bold Font Weight-700</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quam voluptatum,
+            labore sint hic modi id inventore minima maxime ipsam? Ducimus,</p>
+
+    </section>
+
+    <footer>CSS Learning project template </footer>
 
 </body>
 
