@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Hub Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 50px;
+
+            background-color: black;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: orange;
+            font-size: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+
+        section {
+            padding: 80px 50px;
+        }
+
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 40px;
+
+            background-color: #1f222b;
+
+            color: white;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        .left h4 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        .left h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            color: #d1d1d1;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn1 {
+            background-color: orange;
+            color: white;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .btn1:hover {
+            background-color: darkorange;
+            transform: translateY(-3px);
+        }
+
+        .btn2 {
+            background-color: transparent;
+
+            border: 2px solid orange;
+
+            color: orange;
+
+            padding: 12px 25px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .btn2:hover {
+            background-color: orange;
+            color: white;
+        }
+
+
+        .top-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .big-img img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            transition: 0.4s;
+        }
+
+        .big-img img:hover {
+            transform: scale(1.03);
+        }
+
+        .small-card {
+            background-color: #2a2d37;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            transition: 0.3s;
+        }
+
+        .small-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .small-card h2 {
+            margin-bottom: 15px;
+
+            color: orange;
+        }
+
+        .small-card p {
+            color: #d1d1d1;
+
+            line-height: 1.7;
+        }
+
+        .chef-img {
+            grid-column: span 2;
+        }
+
+        .chef-img img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            transition: 0.4s;
+        }
+
+        .chef-img img:hover {
+            transform: scale(1.03);
+        }
+
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+
+            font-size: 35px;
+        }
+
+
+        .menu-box {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+
+            background-color: #ece7e7;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            text-align: center;
+
+            padding-bottom: 20px;
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            background-color: black;
+            color: white;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin-top: 15px;
+        }
+
+        .card p {
+            padding: 10px;
+        }
+
+        .card button {
+            background-color: orange;
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .features {
+            background-color: #fff5e6;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+
+            background-color: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background-color: orange;
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        .about {
+            display: flex;
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .about-left,
+        .about-right {
+            flex: 1;
+        }
+
+        .about-left img {
+            width: 100%;
+            border-radius: 15px;
+
+            transition: 0.4s;
+        }
+
+        .about-left img:hover {
+            transform: scale(1.03);
+        }
+
+        .about-right h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-right p {
+            color: gray;
+            line-height: 1.7;
+        }
+
+
+        .contact {
+            text-align: center;
+            background-color: #f3e8e8;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+
+        footer {
+            background-color: black;
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+
+        <h2>CHEFER</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section id="home" class="top">
+
+
+        <div class="left">
+
+            <h4>WELCOME TO CHEFER</h4>
+
+            <h1>Fresh & Tasty Food Experience</h1>
+
+            <p>
+                Enjoy premium dishes prepared by expert chefs
+                using fresh ingredients and unique flavors.
+            </p>
+
+            <div class="buttons">
+
+                <button class="btn1">Book Table</button>
+
+                <button class="btn2">View Menu</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <div class="top-grid">
+
+                <div class="big-img">
+
+                    <img src="food.jpeg" alt="food image">
+
+                </div>
+
+                <div class="small-card">
+
+                    <h2>Chef Special</h2>
+
+                    <p>
+                        Experience delicious meals crafted
+                        with passion and creativity.
+                    </p>
+
+                </div>
+
+                <div class="chef-img">
+
+                    <img src="outdoor.jpeg" alt="restaurant image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="menu">
+
+        <h2 class="title">Today's Special</h2>
+
+        <div class="menu-box">
+
+            <div class="card">
+
+                <img src="pizza.jpeg" alt="pizza">
+
+                <h3>Italian Pizza</h3>
+
+                <p>Cheesy and delicious pizza with fresh toppings.</p>
+
+                <button>Order Now</button>
+
+            </div>
+
+            <div class="card">
+
+                <img src="burger.jpeg" alt="burger">
+
+                <h3>Classic Burger</h3>
+
+                <p>Juicy burger served with crispy fries.</p>
+
+                <button>Order Now</button>
+
+            </div>
+
+            <div class="card">
+
+                <img src="protein_bowl.jpeg" alt="protein bowl">
+
+                <h3>Protein Bowl</h3>
+
+                <p>Healthy bowl packed with nutrition and taste.</p>
+
+                <button>Order Now</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="features" class="features">
+
+        <div class="boxes">
+
+            <div class="box">
+
+                <h3>Fresh Ingredients</h3>
+
+                <p>Only fresh and quality ingredients used.</p>
+
+            </div>
+
+            <div class="box">
+
+                <h3>Fast Delivery</h3>
+
+                <p>Quick delivery to your doorstep.</p>
+
+            </div>
+
+            <div class="box">
+
+                <h3>Best Chefs</h3>
+
+                <p>Experienced chefs preparing tasty meals.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about" class="about">
+
+        <div class="about-left">
+
+            <img src="outdoor.jpeg" alt="restaurant image">
+
+        </div>
+
+        <div class="about-right">
+
+            <h2>About Our Restaurant</h2>
+
+            <p>
+                CHEFER offers delicious meals,
+                quality service and a comfortable
+                dining experience for everyone.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: venkateshstrives@gmail.com</p>
+
+        <p>Phone: +91 9898981212</p>
+
+    </section>
+
+
+    <footer>
+
+        <p>2026 CHEFER Restaurant. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
