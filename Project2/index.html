@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice Hub Restaurant</title>
+    <title>CHEFER Restaurant</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -26,15 +22,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             padding: 20px 50px;
-
             background-color: black;
-
             position: sticky;
             top: 0;
-
-            z-index: 100;
         }
 
         nav h2 {
@@ -44,15 +35,16 @@
 
         nav ul {
             display: flex;
-            gap: 20px;
-
             list-style: none;
+        }
+
+        nav li {
+            margin-right: 20px;
         }
 
         nav a {
             text-decoration: none;
             color: white;
-
             transition: 0.3s;
         }
 
@@ -70,16 +62,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            gap: 40px;
-
             background-color: #1f222b;
-
             color: white;
         }
 
         .left {
             flex: 1;
+            margin-right: 40px;
         }
 
         .right {
@@ -99,43 +88,31 @@
         .left p {
             color: #d1d1d1;
             margin-bottom: 25px;
-            line-height: 1.7;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
         }
 
         .btn1 {
             background-color: orange;
             color: white;
-
             border: none;
-
             padding: 12px 25px;
-
-            cursor: pointer;
-
+            margin-right: 15px;
             transition: 0.3s;
         }
 
         .btn1:hover {
             background-color: darkorange;
-            transform: translateY(-3px);
+            transform: scale(1.05);
         }
 
         .btn2 {
             background-color: transparent;
-
             border: 2px solid orange;
-
             color: orange;
-
             padding: 12px 25px;
-
-            cursor: pointer;
-
             transition: 0.3s;
         }
 
@@ -144,76 +121,13 @@
             color: white;
         }
 
-
-        .top-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 20px;
-        }
-
-        .big-img img {
+        .right img {
             width: 100%;
-            height: 250px;
-
-            object-fit: cover;
-
             border-radius: 15px;
-
             transition: 0.4s;
         }
 
-        .big-img img:hover {
-            transform: scale(1.03);
-        }
-
-        .small-card {
-            background-color: #2a2d37;
-
-            padding: 30px;
-
-            border-radius: 15px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            transition: 0.3s;
-        }
-
-        .small-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .small-card h2 {
-            margin-bottom: 15px;
-
-            color: orange;
-        }
-
-        .small-card p {
-            color: #d1d1d1;
-
-            line-height: 1.7;
-        }
-
-        .chef-img {
-            grid-column: span 2;
-        }
-
-        .chef-img img {
-            width: 100%;
-            height: 250px;
-
-            object-fit: cover;
-
-            border-radius: 15px;
-
-            transition: 0.4s;
-        }
-
-        .chef-img img:hover {
+        .right img:hover {
             transform: scale(1.03);
         }
 
@@ -221,52 +135,40 @@
         .title {
             text-align: center;
             margin-bottom: 40px;
-
             font-size: 35px;
         }
 
 
         .menu-box {
             display: flex;
-            gap: 20px;
         }
 
         .card {
             flex: 1;
-
             background-color: #ece7e7;
-
             border-radius: 15px;
-
-            overflow: hidden;
-
             text-align: center;
-
             padding-bottom: 20px;
-
+            margin-right: 20px;
             transition: 0.4s;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-
+            transform: scale(1.03);
             background-color: black;
             color: white;
-
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .card img {
             width: 100%;
             height: 250px;
-
-            object-fit: cover;
-
+            border-radius: 15px 15px 0 0;
             transition: 0.4s;
         }
 
-        .card:hover img {
-            transform: scale(1.05);
+        .card img:hover {
+            transform: scale(1.02);
         }
 
         .card h3 {
@@ -280,13 +182,8 @@
         .card button {
             background-color: orange;
             color: white;
-
             border: none;
-
             padding: 10px 20px;
-
-            cursor: pointer;
-
             transition: 0.3s;
         }
 
@@ -295,27 +192,21 @@
             color: black;
         }
 
-
         .features {
             background-color: #fff5e6;
         }
 
         .boxes {
             display: flex;
-            gap: 20px;
         }
 
         .box {
             flex: 1;
-
             background-color: white;
-
             padding: 30px;
-
             text-align: center;
-
             border-radius: 15px;
-
+            margin-right: 20px;
             transition: 0.3s;
         }
 
@@ -330,11 +221,13 @@
         .about {
             display: flex;
             align-items: center;
-
-            gap: 40px;
         }
 
-        .about-left,
+        .about-left {
+            flex: 1;
+            margin-right: 40px;
+        }
+
         .about-right {
             flex: 1;
         }
@@ -342,7 +235,6 @@
         .about-left img {
             width: 100%;
             border-radius: 15px;
-
             transition: 0.4s;
         }
 
@@ -356,7 +248,6 @@
 
         .about-right p {
             color: gray;
-            line-height: 1.7;
         }
 
 
@@ -373,16 +264,13 @@
         footer {
             background-color: black;
             color: white;
-
             text-align: center;
-
             padding: 20px;
         }
     </style>
 </head>
 
 <body>
-
 
     <nav>
 
@@ -400,7 +288,6 @@
 
 
     <section id="home" class="top">
-
 
         <div class="left">
 
@@ -423,40 +310,13 @@
 
         </div>
 
-
         <div class="right">
 
-            <div class="top-grid">
-
-                <div class="big-img">
-
-                    <img src="food.jpeg" alt="food image">
-
-                </div>
-
-                <div class="small-card">
-
-                    <h2>Chef Special</h2>
-
-                    <p>
-                        Experience delicious meals crafted
-                        with passion and creativity.
-                    </p>
-
-                </div>
-
-                <div class="chef-img">
-
-                    <img src="outdoor.jpeg" alt="restaurant image">
-
-                </div>
-
-            </div>
+            <img src="food.jpeg" alt="food image">
 
         </div>
 
     </section>
-
 
     <section id="menu">
 
@@ -503,6 +363,7 @@
         </div>
 
     </section>
+
 
     <section id="features" class="features">
 
